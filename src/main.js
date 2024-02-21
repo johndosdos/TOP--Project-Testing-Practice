@@ -1,6 +1,7 @@
 // @ts-check
 
 /**
+ * A function that takes a string and returns it with the first character capitalized.
  * @param {string} string
  * @returns {string}
  */
@@ -11,6 +12,7 @@ function capitalize(string) {
 }
 
 /**
+ * A function that takes a string and returns it reversed.
  * @param {string} string
  * @returns {string}
  */
