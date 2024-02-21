@@ -20,4 +20,49 @@ function reverseString(string) {
   return string.split("").reverse().join("");
 }
 
-export { capitalize, reverseString };
+/**
+ * A calculator object that contains functions for the basic operations
+ */
+const calculator = {
+  /**
+   * Adds two numbers together
+   * @param {number} x
+   * @param {number} y
+   * @returns {number}
+   */
+  add: (x, y) => {
+    return x + y;
+  },
+
+  /**
+   * Subtracts two numbers from another
+   * @param {number} x
+   * @param {number} y
+   * @returns {number}
+   */
+  subtract: (x, y) => {
+    return x - y;
+  },
+
+  /**
+   * Multiplies two numbers together
+   * @param {number} x
+   * @param {number} y
+   * @returns {number}
+   */
+  multiply: (x, y) => {
+    return x * y;
+  },
+
+  /**
+   * Divides two numbers from another
+   * @param {number} x
+   * @param {number} y
+   * @returns {number}
+   */
+  divide: (x, y) => {
+    return x / y;
+  },
+};
+
+export { capitalize, reverseString, calculator };

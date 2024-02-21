@@ -1,5 +1,5 @@
 import { describe, expect, test } from "@jest/globals";
-import { capitalize, reverseString } from "../src/main";
+import { capitalize, reverseString, calculator } from "../src/main";
 
 describe("capitalize", () => {
   test("takes a string and returns it with the first character capitalized", () => {
@@ -14,7 +14,12 @@ describe("reverseString", () => {
 });
 
 describe("calculator", () => {
-  test.todo("contains functions for the four basic operations");
+  test("contains functions for the four basic operations", () => {
+    expect(calculator.add(1, 2)).toEqual(3);
+    expect(calculator.subtract(5, 2)).toEqual(3);
+    expect(calculator.multiply(5, 5)).toEqual(25);
+    expect(calculator.divide(15, 3)).toEqual(5);
+  });
 });
 
 describe("caesarCipher", () => {
