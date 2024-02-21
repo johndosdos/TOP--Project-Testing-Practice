@@ -1,5 +1,5 @@
 import { describe, expect, test } from "@jest/globals";
-import { capitalize } from "../src/main";
+import { capitalize, reverseString } from "../src/main";
 
 describe("capitalize", () => {
   test("takes a string and returns it with the first character capitalized", () => {
@@ -8,7 +8,9 @@ describe("capitalize", () => {
 });
 
 describe("reverseString", () => {
-  test.todo("takes a string and returns it reversed");
+  test("takes a string and returns it reversed", () => {
+    expect(reverseString("hello")).toEqual("olleh");
+  });
 });
 
 describe("calculator", () => {
