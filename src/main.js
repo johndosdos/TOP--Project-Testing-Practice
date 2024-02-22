@@ -67,4 +67,42 @@ const calculator = {
   },
 };
 
-export { capitalize, reverseString, calculator };
+/**
+ * A function that takes a string and a shift factor and returns with each character shifted
+ * @param {string} string
+ * @param {number} shiftFactor
+ * @returns {string}
+ */
+function caesarCipher(string, shiftFactor = 0) {
+  if (shiftFactor < 0) {
+    return "Shift factor should be greater than or equal to 0";
+  }
+
+  const shiftedString = string
+    .split("")
+    .map((element) => {
+      /* For lowercase characters */
+      if (element.charCodeAt(0) >= 97 && element.charCodeAt(0) <= 122) {
+        return String.fromCharCode(
+          ((element.charCodeAt(0) - 97 + shiftFactor) % 26) + 97,
+        );
+      }
+
+      /* For UPPERCASE characters */
+      if (element.charCodeAt(0) >= 65 && element.charCodeAt(0) <= 90) {
+        return String.fromCharCode(
+          ((element.charCodeAt(0) - 65 + shiftFactor) % 26) + 65,
+        );
+      }
+
+      /* For non-letter characters */
+      return element;
+    })
+    .join("");
+
+  return shiftedString;
+}
+
+// console.log(caesarCipher("Hello World!", 3));
+
+export { capitalize, reverseString, calculator, caesarCipher };
