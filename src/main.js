@@ -103,6 +103,4 @@ function caesarCipher(string, shiftFactor = 0) {
   return shiftedString;
 }
 
-// console.log(caesarCipher("Hello World!", 3));
-
 export { capitalize, reverseString, calculator, caesarCipher };
