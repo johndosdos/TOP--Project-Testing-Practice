@@ -103,4 +103,74 @@ function caesarCipher(string, shiftFactor = 0) {
   return shiftedString;
 }
 
-export { capitalize, reverseString, calculator, caesarCipher };
+/**
+ * A function that takes an array of numbers and returns an object with the following properties: average, min, max, and length.
+ * @param {number[]} array
+ * @returns
+ */
+function analyzeArray(array) {
+  /**
+   * Takes the average of all the numbers from the array and returns it
+   * @param {number[]} array
+   * @returns {number}
+   */
+  const average = (array) => {
+    const sum = array.reduce((prev, curr) => {
+      return prev + curr;
+    }, 0);
+
+    return sum / array.length;
+  };
+
+  /**
+   * Finds the minimum value from the array returns it
+   * @param {number[]} array
+   * @returns {number}
+   */
+  const min = (array) => {
+    let temp = array[0];
+
+    for (const element of array) {
+      if (element < temp) {
+        temp = element;
+      }
+    }
+
+    return temp;
+  };
+
+  /**
+   * Finds the maximum value from the array returns it
+   * @param {number[]} array
+   * @returns {number}
+   */
+  const max = (array) => {
+    let temp = array[0];
+
+    for (const element of array) {
+      if (element > temp) {
+        temp = element;
+      }
+    }
+
+    return temp;
+  };
+
+  /**
+   * Returns the length of the array
+   * @param {number[]} array
+   * @returns {number}
+   */
+  const length = (array) => {
+    return array.length;
+  };
+
+  return {
+    average: average(array),
+    min: min(array),
+    max: max(array),
+    length: length(array),
+  };
+}
+
+export { capitalize, reverseString, calculator, caesarCipher, analyzeArray };
