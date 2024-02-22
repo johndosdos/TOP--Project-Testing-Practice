@@ -4,6 +4,7 @@ import {
   reverseString,
   calculator,
   caesarCipher,
+  analyzeArray,
 } from "../src/main";
 
 describe("capitalize", () => {
@@ -31,5 +32,18 @@ describe("caesarCipher", () => {
   test("takes a string and a shift factor and returns it with each character “shifted”", () => {
     expect(caesarCipher("Hello World!", 0)).toEqual("Hello World!");
     expect(caesarCipher("Hello World!", 3)).toEqual("Khoor Zruog!");
+  });
+});
+
+describe("analyzeArray", () => {
+  test("function that takes an array of numbers and returns an object with the following properties: average, min, max, and length", () => {
+    expect(analyzeArray([3, 13, 5, 4, 15, 10, 16, 18, 1, 20]).average).toEqual(
+      10.5,
+    );
+    expect(analyzeArray([3, 13, 5, 4, 15, 10, 16, 18, 1, 20]).min).toEqual(1);
+    expect(analyzeArray([3, 13, 5, 4, 15, 10, 16, 18, 1, 20]).max).toEqual(20);
+    expect(analyzeArray([3, 13, 5, 4, 15, 10, 16, 18, 1, 20]).length).toEqual(
+      10,
+    );
   });
 });
